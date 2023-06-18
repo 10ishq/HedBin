@@ -1,4 +1,9 @@
 *.env
 HedBin-Backend/node_modules
+HedBin-Backend/.env
+
 HedBin-FrontEnd/node_modules
+HedBin-FrontEnd/.env
+
 HedBin-Manufacture-Product/node_modules
+HedBin-Manufacture-Product/.env
