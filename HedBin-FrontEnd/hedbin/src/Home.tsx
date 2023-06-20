@@ -21,7 +21,7 @@ export default function Home() {
       try {
         setIsLoading(true);
         const response = await claimReward(AccountId.fromEvmAddress(0, 0, metamaskAccountAddress), productHash!);
-        if (response.message === "Transfer successful") {
+        if (response.message === "Reward redeemed successfully") {
           setShowConfetti(true);
           setRewardClaimed(true);
         } else if (response.status === "fail" && response.message === "Product not found in the database") {

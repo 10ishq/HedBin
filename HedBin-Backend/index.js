@@ -41,8 +41,8 @@ async function sendTokens(address, amount) {
     client.setOperator(myAccountId, myPrivateKey);
 
     // Set default max transaction fee & max query payment
-    client.setDefaultMaxTransactionFee(new Hbar(100));
-    client.setMaxQueryPayment(new Hbar(50));
+    client.setDefaultMaxTransactionFee(new Hbar(200));
+    client.setMaxQueryPayment(new Hbar(100));
 
     // If the address is missing, throw an error
     if (!address) {
