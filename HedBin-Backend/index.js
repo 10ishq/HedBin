@@ -67,7 +67,7 @@ async function sendTokens(address, amount) {
 
     // Create the transfer transaction
     const sendHbar = await new TransferTransaction()
-      .addHbarTransfer(myAccountId, Hbar.fromTinybars(amount ? amount : -100))
+      .addHbarTransfer(myAccountId, Hbar.fromTinybars(amount ? -amount : -100))
       .addHbarTransfer(newAccountId, Hbar.fromTinybars(amount ? amount : 100))
       .execute(client);
 

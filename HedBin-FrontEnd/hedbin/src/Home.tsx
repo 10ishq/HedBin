@@ -24,7 +24,7 @@ export default function Home() {
         if (response.message === "Reward redeemed successfully") {
           setShowConfetti(true);
           setRewardClaimed(true);
-        } else if (response.status === "fail" && response.message === "Product not found in the database") {
+        } else if (response.status === "fail" && response.message === "Product already redeemed") {
           setClaimErrorMessage("Invalid product or already redeemed :(");
         }
       } catch (error) {
