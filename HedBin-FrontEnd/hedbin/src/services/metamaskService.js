@@ -1,10 +1,21 @@
-export const switchToHederaNetwork = async (ethereum: any) => {
+import MetaMaskSDK from '@metamask/sdk';
+
+
+const MMSDK = new MetaMaskSDK({
+  useDeeplink: false,
+  communicationLayerPreference: "socket",
+});
+
+
+
+
+export const switchToHederaNetwork = async (ethereum) => {
     try {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: '0x128' }] // chainId must be in hexadecimal numbers
       });
-    } catch (error: any) {
+    } catch (error) {
       if (error.code === 4902) {
         try {
           await ethereum.request({
@@ -34,9 +45,9 @@ export const switchToHederaNetwork = async (ethereum: any) => {
   // returns a list of accounts
 // otherwise empty array
 export const connectToMetamask = async () => {
-    const { ethereum } = window as any;
+  const ethereum = MMSDK.getProvider(); // You can also access via window.ethereum
     // keep track of accounts returned
-    let accounts: string[] = []
+    let accounts = []
     if (!ethereum) {
       throw new Error("Metamask is not installed! Go install the extension!");
     }

@@ -182,7 +182,7 @@ app.get("/redeemReward", async (req, res) => {
       
 
 
-      await sendHbar(address, rewardAmount);
+      await sendTokens(address, rewardAmount);
       product.redeemed = true;
       await product.save();
 

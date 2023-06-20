@@ -28,7 +28,7 @@ export const sendHbar = async (client:Client, fromAddress: AccountId | string, t
 
 export const claimReward = async (toAddress: AccountId | string, productHash: string) => {
   try {
-    const response = await fetch(`http://localhost:3001/redeemReward?address=${toAddress}&productHash=${productHash}`);
+    const response = await fetch(`https://hedbin-backend.onrender.com/redeemReward?address=${toAddress}&productHash=${productHash}`);
     const data = await response.json();
     console.log(data);
     return data;
