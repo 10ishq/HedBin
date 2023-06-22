@@ -1,5 +1,5 @@
 import { AccountId, Client, PrivateKey } from "@hashgraph/sdk";
-import { Button, Stack, Typography, CircularProgress } from "@mui/material";
+import { Button, Stack, Typography, CircularProgress, useMediaQuery } from "@mui/material";
 import { useState, useContext, useEffect } from "react";
 import { GlobalAppContext } from "./contexts/GlobalAppContext";
 import { sendHbar, claimReward } from "./services/hederaService";
@@ -13,6 +13,7 @@ export default function Home() {
   const [rewardClaimed, setRewardClaimed] = useState(false);
   const [claimErrorMessage, setClaimErrorMessage] = useState("");
   const { productHash } = useParams();
+  const isSmallScreen = useMediaQuery("(max-width: 600px)");
 
   // ... existing code ...
 
@@ -45,16 +46,21 @@ export default function Home() {
           height={window.innerHeight}
         />
       )}
-      <Stack 
+      <Stack
         spacing={4}
-        sx={{alignItems: 'center', justifyContent: 'center', height: '100vh'}}
+        sx={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+          padding: isSmallScreen ? '2rem' : 0, // Add padding for smaller screens
+        }}
       >
         {rewardClaimed ? (
           <Typography
             variant="h4"
             color="white"
             textAlign={'center'}
-            fontSize={'4rem'}
+            fontSize={isSmallScreen ? '2rem' : '4rem'} // Adjust font size for smaller screens
           >
             Congratulations! You have successfully claimed your reward!
           </Typography>
@@ -65,7 +71,7 @@ export default function Home() {
                 variant="h4"
                 color="white"
                 textAlign={'center'}
-                fontSize={'4rem'}
+                fontSize={isSmallScreen ? '2rem' : '4rem'} // Adjust font size for smaller screens
               >
                 {claimErrorMessage}
               </Typography>
@@ -74,7 +80,7 @@ export default function Home() {
                 variant="h4"
                 color="white"
                 textAlign={'center'}
-                fontSize={'4rem'}
+                fontSize={isSmallScreen ? '2rem' : '4rem'} // Adjust font size for smaller screens
               >
                 Connect your MetaMask account to claim your HBAR!
               </Typography>
@@ -87,9 +93,9 @@ export default function Home() {
                 disabled={isLoading}
                 sx={{
                   position: 'relative',
-                  fontSize: '2rem',
+                  fontSize: isSmallScreen ? '1.5rem' : '2rem', // Adjust font size for smaller screens
                   fontWeight: 'bold',
-                  padding: '1rem 2rem',
+                  padding: isSmallScreen ? '1rem' : '1rem 2rem', // Adjust padding for smaller screens
                   borderRadius: '2rem',
                   '& .MuiCircularProgress-root': {
                     color: 'white',

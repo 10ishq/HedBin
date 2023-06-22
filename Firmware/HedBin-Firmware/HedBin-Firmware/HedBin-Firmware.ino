@@ -1,4 +1,4 @@
-#include <SPI.h>
+  #include <SPI.h>
 #include <MFRC522.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
@@ -217,7 +217,7 @@ void sendHttpRequest(const String& url) {
         display.display();
         delay(5000);
         showQRCode("http://192.168.29.115:3000/" + payload);
-        delay(20000);
+        delay(35000);
 
         int pos;
             for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
