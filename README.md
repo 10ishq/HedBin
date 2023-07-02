@@ -29,3 +29,20 @@ The thought process revolves around creating an accessible and affordable recycl
 - React.js for frontend development
 - QR code generation library
 - Hashgraph SDK for transactions and reward distribution
+
+## Photographs from Hardware Prototype
+- HedBin Prototype
+  ![HedBin Prototype](https://github.com/10ishq/HedBin/assets/30299564/16cf1363-68ce-4c8e-9a3c-b58f34e12009)
+  ![image](https://github.com/10ishq/HedBin/assets/30299564/f5ee17a8-2f3b-4153-844b-a1645a080d6d)
+- Internal Hardware, including a servo motor, a reference scrap bottle, a microcontroller, and an RFID reader.
+  ![image](https://github.com/10ishq/HedBin/assets/30299564/84d57ecf-fc7d-490c-9cf2-5ed896e9baaf)
+  ![image](https://github.com/10ishq/HedBin/assets/30299564/7fa80ed7-38f8-4f3a-b835-e32b30cc7a96)
+  ![image](https://github.com/10ishq/HedBin/assets/30299564/394818bd-eb9a-49ab-a2c3-b2dbac706a03)
+- OLED display.
+  ![image](https://github.com/10ishq/HedBin/assets/30299564/dc13e7ef-dbb9-4318-bad9-a08a95424dee)
+
+  
+
+
+
+
