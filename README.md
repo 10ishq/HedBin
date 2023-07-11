@@ -1,4 +1,4 @@
-# Team:
+# Creator:
 Tanishq Jaiswal (tanishqj555@gmail.com, GitHub: github.com/10ishq)
 
 # Theme: Sustainability
